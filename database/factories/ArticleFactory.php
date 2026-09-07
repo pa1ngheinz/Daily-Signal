@@ -18,7 +18,7 @@ class ArticleFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->sentence(),
+            'title' => ucwords(fake()->sentence(3)),
             'content' => fake()->paragraphs(3, true),
             'category_id' => rand(1, 3),
         ];

@@ -144,8 +144,8 @@
                         <!--end::User Profile Nav Link-->
                         
                         <!--Single Toggle List Item-->
-                        <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                        <li class="nav-item {{ request()->routeIs('articles.*') ? 'menu-open' : '' }}">
+                            <a href="#" class="nav-link">
                                 <i class="bi bi-newspaper"></i>
                                 <p>
                                     Articles
@@ -154,22 +154,22 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="#" class="nav-link {{ request()->routeIs('articles.index') ? 'active' : ''}}">
                                         <p>View All</p>
                                     </a>
                                 </li>
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="#" class="nav-link {{ request()->routeIs('articles.create') ? 'active' : ''}} ">
                                         <p>Create</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
-                        <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
                                 <i class="bi bi-grid"></i>
                                 <p>
                                     Categories
@@ -192,8 +192,8 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
                                 <i class="bi bi-chat-left-text-fill"></i>
                                 <p>
                                     Comments
@@ -225,21 +225,7 @@
 
         <!--begin::App Main Content-->
         <main class="app-main">
-            <div class="app-content-header">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="mb-0">Articles Table</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="app-content">
-                <div class="container-fluid">
-                    @yield('content')
-                </div>
-            </div>
+            @yield('content')
         </main>
         <!--end::App Main Content-->
 
