@@ -14,4 +14,8 @@ class ArticleController extends Controller
 
         return view('editor.articles', compact('articles'));
     }
+
+    public function create(){
+        return view('editor.add-article');
+    }
 }

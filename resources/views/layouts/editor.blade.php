@@ -154,14 +154,14 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link {{ request()->routeIs('articles.index') ? 'active' : ''}}">
+                                    <a href="/articles" class="nav-link {{ request()->routeIs('articles.index') ? 'active' : ''}}">
                                         <p>View All</p>
                                     </a>
                                 </li>
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link {{ request()->routeIs('articles.create') ? 'active' : ''}} ">
+                                    <a href="/articles/add" class="nav-link {{ request()->routeIs('articles.create') ? 'active' : ''}} ">
                                         <p>Create</p>
                                     </a>
                                 </li>

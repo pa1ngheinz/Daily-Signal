@@ -7,6 +7,12 @@
                 <div class="col-sm-6">
                     <h3 class="mb-0">Articles</h3>
                 </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end mb-0">
+                        <li class="breadcrumb-item"><a href="/articles">Articles</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">View all</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </div>
@@ -38,7 +44,7 @@
                 <div class="card-body p-0">
                     <div class="table-responsive">
                         <table class="table table-hover table-striped align-middle mb-0">
-                            <thead class="table-light">
+                            <thead class="table">
                                 <tr>
                                     <th scope="col" style="width: 60px;">No</th>
                                     <th scope="col">Title</th>
