@@ -75,7 +75,7 @@
                                             style="width: 60px; height: 45px; object-fit: cover;">
                                     </td>
                                     <td>
-                                        <span class="badge text-bg-primary">Technology</span>
+                                        <span class="badge text-bg-primary">{{ $article->category->name }}</span>
                                     </td>
                                     <td class="text-secondary small">{{ $article->created_at }}</td>
                                     <td class="text-secondary small">{{ $article->updated_at }}</td>
