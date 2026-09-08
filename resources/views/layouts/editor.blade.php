@@ -123,7 +123,7 @@
         <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
             <!--begin::Sidebar Brand-->
             <div class="sidebar-brand">
-                <a href="#" class="brand-link">
+                <a href="{{ route('articles.index') }}" class="brand-link">
                     <span class="brand-text fw-light">Editor Panel</span>
                 </a>
             </div>
@@ -154,14 +154,14 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/articles" class="nav-link {{ request()->routeIs('articles.index') ? 'active' : ''}}">
+                                    <a href="{{ route('articles.index') }}" class="nav-link {{ request()->routeIs('articles.index') ? 'active' : ''}}">
                                         <p>View All</p>
                                     </a>
                                 </li>
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/articles/add" class="nav-link {{ request()->routeIs('articles.create') ? 'active' : ''}} ">
+                                    <a href=" {{ route('articles.create') }}" class="nav-link {{ request()->routeIs('articles.create') ? 'active' : ''}} ">
                                         <p>Create</p>
                                     </a>
                                 </li>

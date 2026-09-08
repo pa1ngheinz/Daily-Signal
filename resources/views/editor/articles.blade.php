@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end mb-0">
-                        <li class="breadcrumb-item"><a href="/articles">Articles</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('articles.index') }}">Articles</a></li>
                         <li class="breadcrumb-item active" aria-current="page">View all</li>
                     </ol>
                 </div>
@@ -23,7 +23,8 @@
                 <div class="card-header bg-body py-3">
                     <div class="row g-3 align-items-center justify-content-between">
                         <div class="col-12 col-md-auto">
-                            <a href="#" class="btn btn-primary d-inline-flex align-items-center gap-2">
+                            <a href="{{ route('articles.create') }}"
+                                class="btn btn-primary d-inline-flex align-items-center gap-2">
                                 <i class="bi bi-plus-lg"></i>
                                 <span>Create Article</span>
                             </a>
@@ -58,38 +59,38 @@
                             </thead>
                             <tbody>
                                 @php $count = 1 @endphp
-                                @foreach($articles as $article)
-                                <tr>
-                                    <td class="fw-semibold text-muted">{{ $count++ }}</td>
-                                    <td>
-                                        <div class="fw-bold">{{ $article->title }}</div>
-                                    </td>
-                                    <td>
-                                        <span class="text-truncate d-inline-block text-muted" style="max-width: 200px;">
-                                            {{ $article->content }}
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <img src="https://picsum.photos/seed/tech1/80/60" alt="Fake Image 1"
-                                            class="img-thumbnail rounded"
-                                            style="width: 60px; height: 45px; object-fit: cover;">
-                                    </td>
-                                    <td>
-                                        <span class="badge text-bg-primary">{{ $article->category->name }}</span>
-                                    </td>
-                                    <td class="text-secondary small">{{ $article->created_at }}</td>
-                                    <td class="text-secondary small">{{ $article->updated_at }}</td>
-                                    <td class="text-center">
-                                        <div class="btn-group btn-group-sm" role="group">
-                                            <a href="#" class="btn btn-outline-primary" title="Edit">
-                                                <i class="bi bi-pencil"></i>
-                                            </a>
-                                            <button type="button" class="btn btn-outline-danger" title="Delete">
-                                                <i class="bi bi-trash"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                @foreach ($articles as $article)
+                                    <tr>
+                                        <td class="fw-semibold text-muted">{{ $count++ }}</td>
+                                        <td>
+                                            <div class="fw-bold">{{ $article->title }}</div>
+                                        </td>
+                                        <td>
+                                            <span class="text-truncate d-inline-block text-muted" style="max-width: 200px;">
+                                                {{ $article->content }}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <img src="https://picsum.photos/seed/tech1/80/60" alt="Fake Image 1"
+                                                class="img-thumbnail rounded"
+                                                style="width: 60px; height: 45px; object-fit: cover;">
+                                        </td>
+                                        <td>
+                                            <span class="badge text-bg-primary">{{ $article->category->name }}</span>
+                                        </td>
+                                        <td class="text-secondary small">{{ $article->created_at }}</td>
+                                        <td class="text-secondary small">{{ $article->updated_at }}</td>
+                                        <td class="text-center">
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <a href="#" class="btn btn-outline-primary" title="Edit">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                                <button type="button" class="btn btn-outline-danger" title="Delete">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>
@@ -99,7 +100,8 @@
                 <div class="card-footer bg-body py-3">
                     <div class="row align-items-center">
                         <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
-                            <span class="text-muted small">Showing {{ $articles->firstItem() }} to {{ $articles->lastItem() }} of {{ $articles->total() }} entries</span>
+                            <span class="text-muted small">Showing {{ $articles->firstItem() }} to
+                                {{ $articles->lastItem() }} of {{ $articles->total() }} entries</span>
                         </div>
 
                         <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
